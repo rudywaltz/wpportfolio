@@ -1,8 +1,11 @@
 <?php /* Template Name: CV */ ?>
 
 <?php get_header(); ?>
+<ul><?php pll_the_languages();?></ul>
+<br>
   <section id="content" role="main">
-    <?php $featured_items = get_field( 'egyeni_kiallitas' ); ?>
+    <?php $featured_items = get_field( 'solo_exhibition' ); ?>
+    <?php var_dump($featured_items) ?>
     <?php if ( ! empty( $featured_items ) ) : ?>
       <?php foreach ( $featured_items as $data ) : ?>
         <br>
@@ -35,5 +38,5 @@
       <?php if ( ! post_password_required() ) comments_template( '', true ); ?>
     <?php endwhile; endif; ?>
   </section>
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>

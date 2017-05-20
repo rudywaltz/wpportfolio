@@ -36,23 +36,13 @@ function blankslate_filter_wp_title( $title )
 return $title . esc_attr( get_bloginfo( 'name' ) );
 }
 add_action( 'widgets_init', 'blankslate_widgets_init' );
-function blankslate_widgets_init()
-{
-register_sidebar( array (
-'name' => __( 'Sidebar Widget Area', 'blankslate' ),
-'id' => 'primary-widget-area',
-'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
-'after_widget' => "</li>",
-'before_title' => '<h3 class="widget-title">',
-'after_title' => '</h3>',
-) );
-}
+
 function blankslate_custom_pings( $comment )
 {
 $GLOBALS['comment'] = $comment;
 ?>
 <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>"><?php echo comment_author_link(); ?></li>
-<?php 
+<?php
 }
 add_filter( 'get_comments_number', 'blankslate_comments_number' );
 function blankslate_comments_number( $count )
