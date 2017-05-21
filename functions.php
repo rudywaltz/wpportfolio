@@ -12,16 +12,25 @@ register_nav_menus(
 array( 'main-menu' => __( 'Main Menu', 'blankslate' ) )
 );
 }
+if (function_exists('pll_register_string')) {
+  pll_register_string( 'prev_string', 'Volt', 'homepage');
+  pll_register_string( 'actual_string', 'Most', 'homepage');
+  pll_register_string( 'next_string', 'Majd', 'homepage');
+}
+
 add_action( 'wp_enqueue_scripts', 'blankslate_load_scripts' );
+
 function blankslate_load_scripts()
 {
-wp_enqueue_script( 'jquery' );
+wp_enqueue_script( 'main', get_template_directory_uri() . '/js/app.js', false, 1, true);
 }
 add_action( 'comment_form_before', 'blankslate_enqueue_comment_reply_script' );
 function blankslate_enqueue_comment_reply_script()
 {
 if ( get_option( 'thread_comments' ) ) { wp_enqueue_script( 'comment-reply' ); }
 }
+
+
 add_filter( 'the_title', 'blankslate_title' );
 function blankslate_title( $title ) {
 if ( $title == '' ) {

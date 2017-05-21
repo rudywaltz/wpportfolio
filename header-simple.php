@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600">
   <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
-<?php wp_head(); ?>
+  <?php wp_enqueue_script( 'wallop', get_template_directory_uri() . '/js/Wallop.min.js', false, 2.4, true); ?>
+  <?php wp_enqueue_script( 'adaptive', get_template_directory_uri() . '/js/adaptive-backgrounds.js', false, 1.0, true); ?>
+  <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 <div class="op-content  op-content-fullheight">
