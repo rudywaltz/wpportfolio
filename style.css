@@ -611,7 +611,7 @@ h3 {
   height: calc(100vh - 50px);
   list-style-type: none;
   margin: 0;
-  padding: 0 25px 10px; }
+  padding: 0 25px 25px; }
   .op-exhibitionlist__details {
     font-size: 16px;
     margin-bottom: 36px; }
@@ -634,3 +634,30 @@ h3 {
 
 .op-exhibition__location, .op-exhibition__date {
   font-size: .7em; }
+
+.op-pagelist {
+  height: calc(100vh - 50px);
+  display: flex; }
+
+.box {
+  border: 5px solid #fefefe;
+  background-position-y: 50%;
+  background-size: cover;
+  flex-basis: 100%;
+  position: relative; }
+
+.box__capture {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 10px; }
+
+.cta {
+  border: 1px solid;
+  border-radius: 2px;
+  color: black;
+  padding: 3px 10px;
+  margin-left: auto; }

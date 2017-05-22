@@ -1,0 +1,30 @@
+.op-pagelist {
+  height: calc(100vh - 50px);
+  display: flex;
+}
+
+.box {
+  border: 5px solid #fefefe;
+  background-position-y: 50%;
+  background-size: cover;
+  flex-basis: 100%;
+  position: relative;
+}
+
+.box__capture {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, .3);
+  padding: 10px;
+}
+
+.cta {
+  border: 1px solid;
+  border-radius: 2px;
+  color: black;
+  padding: 3px 10px;
+  margin-left: auto;
+}
