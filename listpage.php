@@ -9,12 +9,12 @@
       <?php $children = get_page_children($post->ID, $posts); ?>
       <?php foreach ($children as $child): ?>
         <?php if ($child->post_parent == $post->ID): ?>
-            <div class="box" style="background-image: url('<?php echo wp_get_attachment_url(get_post_thumbnail_id($child->ID)); ?>') ">
-              <div class="box__capture">
-                <h3><?php echo $child->post_title; ?></h3>
-                <a class="cta" href="<?php echo $child->guid; ?>">Megnéz</a>
-              </div>
+          <a  href="<?php echo $child->guid; ?>" class="op-box" style="background-image: url('<?php echo wp_get_attachment_url(get_post_thumbnail_id($child->ID)); ?>') ">
+            <div class="op-box__capture">
+              <h3><?php echo $child->post_title; ?></h3>
+              <span class="op-box__cta">Megnéz</span>
             </div>
+          </a>
           <?php endif; ?>
       <?php endforeach; ?>
       <?php if ( ! post_password_required() ) comments_template( '', true ); ?>

@@ -31,8 +31,11 @@
         display: inline-block;
 
         &:hover {
+          background: #fff;
+
           .sub-menu {
             display: block;
+            background: #fff;
           }
         }
       }
@@ -40,6 +43,16 @@
       .sub-menu {
         display: none;
         position: absolute;
+        line-height: 1.2;
+        right: 0;
+        padding: 10px;
+        z-index: 10;
+
+        a {
+          line-height: 1.1em;
+          white-space: nowrap;
+          margin-bottom: 5px;
+        }
       }
     }
   }

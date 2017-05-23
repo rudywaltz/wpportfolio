@@ -1,22 +1,30 @@
 <?php /* Template Name: CV */ ?>
 
 <?php get_header(); ?>
-<ul><?php pll_the_languages();?></ul>
-<br>
   <section id="content" role="main">
+    <div class="row">
+      <div class="sidebar">
+        <div class="profile">
+          <img class="profile__img" src="<?php echo get_field( 'picture' )['sizes']['medium'] ?>">
+        </div>
+      </div>
+      <div class="main">
+        <h2><?php echo get_field( 'name' ) ?></h2>
+        <h3><?php echo get_field( 'email' ) ?></h3>
+        <h3><?php echo get_field( 'description' ) ?></h3>
+      </div>
+    </div>
     <?php $featured_items = get_field( 'solo_exhibition' ); ?>
-    <?php var_dump($featured_items) ?>
     <?php if ( ! empty( $featured_items ) ) : ?>
       <?php foreach ( $featured_items as $data ) : ?>
-        <br>
-        <br>
-        <h3><?php echo $data['evek'] ?></h3>
+        <h3><?php echo $data['year'] ?></h3>
         <table cellpadding="5px">
-          <?php foreach ( $data['adatok'] as $loop ) : ?>
+          <?php foreach ( $data['data'] as $loop ) : ?>
                 <tr>
-                  <td><?php echo $loop['cim']?></td>
-                  <td><?php echo $loop['galleria']?></td>
-                  <td><?php echo $loop['helyszin']?></td>
+                  <td><?php echo $loop['title']?></td>
+                  <td><?php echo $loop['gallery']?></td>
+                  <td><?php echo $loop['city']?></td>
+                  <td><?php echo $loop['link']?></td>
                 </tr>
         <?php endforeach; ?>
         </table>

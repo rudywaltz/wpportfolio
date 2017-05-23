@@ -1,0 +1,53 @@
+.op {
+  &-lead {
+    background-image: url('../img/sorozat.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    background-attachment: fixed;
+    margin-bottom: 20px;
+    position: relative;
+
+    &__title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, .3);
+      padding: 20px;
+    }
+  }
+
+  &-pagecontent {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+  }
+
+  &-gallery {
+    column-count: 3;
+    column-gap: 1px;
+    font-size: 0;
+  }
+
+  &-thumbnail {
+    display: inline-block;
+    margin-bottom: 1px;
+
+    &:hover {
+      .op-thumbnail__image {
+        transform: scale(1.1);
+      }
+    }
+
+    &__wrap {
+      overflow: hidden;
+    }
+
+    &__image {
+      will-change: transform;
+      transition: transform .3s;
+    }
+  }
+}

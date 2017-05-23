@@ -10,9 +10,11 @@
     </div>
   <?php endforeach; ?>
   </div>
+  <?php /*
   <div class="fixed op-slider__controller">
     <button class="abs Wallop-buttonPrevious">Previous</button>
     <button class="abs Wallop-buttonNext">Next</button>
   </div>
+  */?>
 </div>
 <?php endif; ?>

@@ -1,6 +1,17 @@
+document.addEventListener("DOMContentLoaded", function () {
+  if(typeof baguetteBox !== 'undefined') {
+    baguetteBox.run('.op-gallery', {
+      overlayBackgroundColor: 'white'
+    });
+  }
+});
+
 (function(){
   if(typeof Wallop !== 'undefined') {
     var wallopEl = document.querySelector('.Wallop');
+    if(!wallopEl) {
+      return;
+    }
     var slider = new Wallop(wallopEl);
 
     var autoPlayMs = 4500,
