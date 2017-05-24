@@ -876,21 +876,20 @@ p {
     will-change: transform;
     transition: transform .3s; }
 
-.profile {
+.op-cvheader {
+  align-items: center;
+  display: flex;
+  margin-bottom: 30px;
+  padding-top: 15px; }
+  .op-cvheader__sidebar {
+    flex-basis: 240px;
+    flex-shrink: 0;
+    padding: 0 15px; }
+  .op-cvheader__main {
+    flex-grow: 1;
+    padding: 0 15px; }
+
+.op-profile {
   border-radius: 50%;
   overflow: hidden;
   width: 200px; }
-
-.row {
-  align-items: center;
-  display: flex;
-  margin-bottom: 30px; }
-
-.sidebar {
-  flex-basis: 240px;
-  flex-shrink: 0;
-  padding: 0 15px; }
-
-.main {
-  flex-grow: 1;
-  padding: 0 15px; }

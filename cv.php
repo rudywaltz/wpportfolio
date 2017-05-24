@@ -2,14 +2,14 @@
 
 <?php get_header(); ?>
   <section id="content" role="main">
-    <div class="row">
-      <div class="sidebar">
-        <div class="profile">
-          <img class="profile__img" src="<?php echo get_field( 'picture' )['sizes']['medium'] ?>">
+    <div class="op-cvheader">
+      <div class="op-cvheader__sidebar">
+        <div class="op-profile">
+          <img class="op-profile__image" src="<?php echo get_field( 'picture' )['sizes']['medium'] ?>">
         </div>
       </div>
 
-      <div class="main">
+      <div class="op-cvheader__main">
         <h2><?php echo get_field( 'name' ) ?></h2>
         <h3><?php echo get_field( 'email' ) ?></h3>
         <h3><?php echo get_field( 'description' ) ?></h3>
