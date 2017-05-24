@@ -8,6 +8,7 @@
           <img class="profile__img" src="<?php echo get_field( 'picture' )['sizes']['medium'] ?>">
         </div>
       </div>
+
       <div class="main">
         <h2><?php echo get_field( 'name' ) ?></h2>
         <h3><?php echo get_field( 'email' ) ?></h3>
