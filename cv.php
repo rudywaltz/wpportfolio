@@ -2,49 +2,100 @@
 
 <?php get_header(); ?>
   <section id="content" role="main">
+    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <div class="op-cvheader">
       <div class="op-cvheader__sidebar">
         <div class="op-profile">
           <img class="op-profile__image" src="<?php echo get_field( 'picture' )['sizes']['medium'] ?>">
         </div>
       </div>
-
       <div class="op-cvheader__main">
         <h2><?php echo get_field( 'name' ) ?></h2>
         <h3><?php echo get_field( 'email' ) ?></h3>
         <h3><?php echo get_field( 'description' ) ?></h3>
       </div>
     </div>
-    <?php $featured_items = get_field( 'solo_exhibition' ); ?>
-    <?php if ( ! empty( $featured_items ) ) : ?>
-      <?php foreach ( $featured_items as $data ) : ?>
-        <h3><?php echo $data['year'] ?></h3>
-        <table cellpadding="5px">
-          <?php foreach ( $data['data'] as $loop ) : ?>
-                <tr>
-                  <td><?php echo $loop['title']?></td>
-                  <td><?php echo $loop['gallery']?></td>
-                  <td><?php echo $loop['city']?></td>
-                  <td><?php echo $loop['link']?></td>
-                </tr>
+    <table class="op-table">
+      <?php $educations = get_field( 'education' ); ?>
+      <?php if ( ! empty( $educations ) ) : ?>
+        <tr>
+          <th width="240px" align="left">Tanulmányok</th>
+        <th></th>
+        </tr>
+        <?php foreach ( $educations as $data ) : ?>
+            <tr>
+              <td></td>
+              <td class="date"><?php echo $data['year']?></td>
+            </tr>
+          <tr>
+              <td></td>
+              <td class="data"><?php echo $data['school']?></td>
+            </tr>
         <?php endforeach; ?>
-        </table>
-      <?php endforeach; ?>
-    <?php endif; ?>
+      <?php endif; ?>
+      <?php $featured_items = get_field( 'solo_exhibition' ); ?>
+      <?php if ( ! empty( $featured_items ) ) : ?>
+        <tr>
+        <th width="240px" align="left">Önálló kiállítás</th>
+        <th></th>
+        </tr>
+        <?php foreach ( $featured_items as $data ) : ?>
+            <?php require('templates/cv-table.php') ?>
+        <?php endforeach; ?>
+      <?php endif; ?>
+
+      <?php $featured_items_group = get_field( 'group_exhibition' ); ?>
+      <?php if ( ! empty( $featured_items_group ) ) : ?>
+        <tr>
+        <th width="240px" align="left">Csoportos kiállítás</th>
+        <th></th>
+        </tr>
+        <?php foreach ( $featured_items_group as $data ) : ?>
+          <?php require('templates/cv-table.php') ?>
+        <?php endforeach; ?>
+      <?php endif; ?>
+
+      <?php $prize = get_field( 'prize' ); ?>
+      <?php if ( ! empty( $prize ) ) : ?>
+        <tr>
+          <th width="240px" align="left">Díjak</th>
+          <th></th>
+        </tr>
+        <?php foreach ( $prize as $data ) : ?>
+          <tr>
+            <td></td>
+            <td class="date"><?php echo $data['year']?></td>
+          </tr>
+          <?php if ( ! empty( $data['data'] ) ) : ?>
+            <?php foreach ( $data['data'] as $data2 ) : ?>
+              <tr>
+                <td></td>
+                <td class="data"><?php echo $data2['name']?></td>
+              </tr>
+            <?php endforeach; ?>
+          <?php endif; ?>
+        <?php endforeach; ?>
+      <?php endif; ?>
 
 
-    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <header class="header">
-          <h1 class="entry-title"><?php the_title(); ?></h1> <?php edit_post_link(); ?>
-        </header>
-        <section class="entry-content">
-          <?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
-          <?php the_content(); ?>
-          <div class="entry-links"><?php wp_link_pages(); ?></div>
-        </section>
-      </article>
-      <?php if ( ! post_password_required() ) comments_template( '', true ); ?>
+      <?php $membership = get_field( 'membership' ); ?>
+      <?php if ( ! empty( $membership ) ) : ?>
+        <tr>
+          <th width="240px" align="left">Tagság</th>
+          <th></th>
+        </tr>
+        <?php foreach ( $membership as $data ) : ?>
+          <tr>
+            <td></td>
+            <td class="date"><?php echo $data['year']?></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td class="data"><?php echo $data['membership']?></td>
+          </tr>
+        <?php endforeach; ?>
+      <?php endif; ?>
+    </table>
     <?php endwhile; endif; ?>
   </section>
 
