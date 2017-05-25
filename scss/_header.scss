@@ -26,16 +26,32 @@
       padding: 0;
       list-style-type: none;
 
+      >.menu-item {
+        > a {
+          padding: 0 8px;
+          position: relative;
+
+          &:after {
+            content: '';
+            position: absolute;
+            top: 18px;
+            right: -2px;
+            height: 15px;
+            width: 1px;
+            background: #000000;
+          }
+        }
+      }
+
       .menu-item {
         position: relative;
         display: inline-block;
-
-        &:hover {
-          background: #fff;
-
-          .sub-menu {
-            display: block;
-            background: #fff;
+        body:not(.home) & {
+          &:hover {
+            .sub-menu {
+              display: block;
+              background: #eceae7;
+            }
           }
         }
       }
@@ -45,11 +61,13 @@
         position: absolute;
         line-height: 1.2;
         right: 0;
-        padding: 10px;
+        top: 45px;
+        padding: 5px 0 0;
         z-index: 10;
 
         a {
-          line-height: 1.1em;
+          line-height: 1.2;
+          padding: 10px;
           white-space: nowrap;
           margin-bottom: 5px;
         }

@@ -442,7 +442,7 @@ p {
       height: 100%; }
 
 .op-langselector {
-  margin: 0 0 0 15px;
+  margin: 0 0 0 8px;
   padding: 0;
   list-style-type: none; }
   .op-langselector .current-lang {
@@ -626,23 +626,34 @@ p {
     margin: 0;
     padding: 0;
     list-style-type: none; }
+    .op-navigation .menu > .menu-item > a {
+      padding: 0 8px;
+      position: relative; }
+      .op-navigation .menu > .menu-item > a:after {
+        content: '';
+        position: absolute;
+        top: 18px;
+        right: -2px;
+        height: 15px;
+        width: 1px;
+        background: #000000; }
     .op-navigation .menu .menu-item {
       position: relative;
       display: inline-block; }
-      .op-navigation .menu .menu-item:hover {
-        background: #fff; }
-        .op-navigation .menu .menu-item:hover .sub-menu {
-          display: block;
-          background: #fff; }
+      body:not(.home) .op-navigation .menu .menu-item:hover .sub-menu {
+        display: block;
+        background: #eceae7; }
     .op-navigation .menu .sub-menu {
       display: none;
       position: absolute;
       line-height: 1.2;
       right: 0;
-      padding: 10px;
+      top: 45px;
+      padding: 5px 0 0;
       z-index: 10; }
       .op-navigation .menu .sub-menu a {
-        line-height: 1.1em;
+        line-height: 1.2;
+        padding: 10px;
         white-space: nowrap;
         margin-bottom: 5px; }
 
