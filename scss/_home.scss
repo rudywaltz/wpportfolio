@@ -8,6 +8,10 @@
     margin: 0;
     padding: 0 25px 25px;
 
+    @media all and (max-width: 768px) {
+      height: auto;
+    }
+
     &__details {
       font-size: 16px;
       margin-bottom: 36px;

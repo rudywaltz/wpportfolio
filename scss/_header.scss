@@ -46,6 +46,7 @@
       .menu-item {
         position: relative;
         display: inline-block;
+
         body:not(.home) & {
           &:hover {
             .sub-menu {

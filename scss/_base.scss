@@ -40,6 +40,11 @@ p {
     &-fullheight {
       height: 100vh;
       flex-direction: row;
+
+      @media all and (max-width: 768px) {
+        height: auto;
+        flex-direction: column;
+      }
     }
 
     &__leftside {
