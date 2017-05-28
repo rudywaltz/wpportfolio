@@ -16,6 +16,12 @@ if (function_exists('pll_register_string')) {
   pll_register_string( 'prev_string', 'Volt', 'homepage');
   pll_register_string( 'actual_string', 'Most', 'homepage');
   pll_register_string( 'next_string', 'Majd', 'homepage');
+  pll_register_string( 'action_button', 'Megnéz', 'View');
+  pll_register_string( 'education', 'Tanulmányok', 'Education');
+  pll_register_string( 'exhibitions_group', 'Csoportos Kiállítások', 'Group exhibitions');
+  pll_register_string( 'exhibitions_solo', 'Önálló Kiállítások', 'Solo exhibitions');
+  pll_register_string( 'awards', 'Díjak', 'Awards');
+  pll_register_string( 'membership', 'Tagság', 'Membership');
 }
 
 add_action( 'wp_enqueue_scripts', 'blankslate_load_scripts' );

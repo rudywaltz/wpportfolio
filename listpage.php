@@ -12,12 +12,13 @@
           <a  href="<?php echo $child->guid; ?>" class="op-box" style="background-image: url('<?php echo wp_get_attachment_url(get_post_thumbnail_id($child->ID)); ?>') ">
             <div class="op-box__capture">
               <h3><?php echo $child->post_title; ?></h3>
-              <span class="op-box__cta">Megnéz</span>
+              <span class="op-box__cta">
+                <?php  if(function_exists(pll_e)) { pll_e( 'Megnéz' ); } ?>
+              </span>
             </div>
           </a>
           <?php endif; ?>
       <?php endforeach; ?>
-      <?php if ( ! post_password_required() ) comments_template( '', true ); ?>
     <?php endwhile; endif; ?>
   </div>
 </div>

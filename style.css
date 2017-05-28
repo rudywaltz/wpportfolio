@@ -553,13 +553,17 @@ p {
   margin: 0;
   border: 0;
   border-radius: 15%;
-  background-color: #323232;
-  background-color: rgba(50, 50, 50, 0.5);
+  background-color: transparent;
   color: #ddd;
-  font: 1.6em sans-serif;
-  transition: background-color .4s ease; }
-  .baguetteBox-button:focus, .baguetteBox-button:hover {
-    background-color: rgba(50, 50, 50, 0.9); }
+  font: 1.6em sans-serif; }
+  .baguetteBox-button g,
+  .baguetteBox-button polyline {
+    stroke: #64533d;
+    transition: all .3s; }
+  .baguetteBox-button:hover g,
+  .baguetteBox-button:hover polyline, .baguetteBox-button:focus g,
+  .baguetteBox-button:focus polyline {
+    stroke: #44392a; }
   .baguetteBox-button#next-button {
     right: 2%; }
   .baguetteBox-button#previous-button {
@@ -652,14 +656,20 @@ p {
       position: absolute;
       line-height: 1.2;
       right: 0;
+      text-align: right;
       top: 45px;
       padding: 5px 0 0;
       z-index: 10; }
+      .op-navigation .menu .sub-menu .menu-item {
+        display: block; }
       .op-navigation .menu .sub-menu a {
+        display: block;
         line-height: 1.2;
-        padding: 10px;
+        padding: 5px 10px;
         white-space: nowrap;
-        margin-bottom: 5px; }
+        transition: background .3s; }
+        .op-navigation .menu .sub-menu a:hover {
+          background: #d5d1cb; }
 
 /**
  * wallop.css
