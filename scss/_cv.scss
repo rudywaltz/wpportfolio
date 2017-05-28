@@ -41,17 +41,43 @@
       &.group {
         padding-top: 20px;
       }
+
+      @media all and (max-width: $tablet){
+        display: block;
+        width: 100%;
+
+        &:empty {
+          display: none;
+        }
+      }
     }
 
     td {
       padding: 10px 5px 0;
 
+      @media all and (max-width: $tablet){
+        display: block;
+        width: 100%;
+
+        &:empty {
+          display: none;
+        }
+      }
+
       &.date {
         font-weight: bold;
+
+        @media all and (max-width: $tablet){
+          padding-left: 30px;
+        }
       }
 
       &.data {
         padding-left: 30px;
+
+        @media all and (max-width: $tablet){
+          padding-left: 45px;
+        }
       }
     }
   }

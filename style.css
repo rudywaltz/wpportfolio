@@ -934,9 +934,27 @@ p {
     padding: 0 15px; }
     .op-table th.group {
       padding-top: 20px; }
+    @media all and (max-width: 768px) {
+      .op-table th {
+        display: block;
+        width: 100%; }
+        .op-table th:empty {
+          display: none; } }
   .op-table td {
     padding: 10px 5px 0; }
+    @media all and (max-width: 768px) {
+      .op-table td {
+        display: block;
+        width: 100%; }
+        .op-table td:empty {
+          display: none; } }
     .op-table td.date {
       font-weight: bold; }
+      @media all and (max-width: 768px) {
+        .op-table td.date {
+          padding-left: 30px; } }
     .op-table td.data {
       padding-left: 30px; }
+      @media all and (max-width: 768px) {
+        .op-table td.data {
+          padding-left: 45px; } }

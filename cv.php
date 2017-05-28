@@ -21,7 +21,7 @@
       <?php $educations = get_field( 'education' ); ?>
       <?php if ( ! empty( $educations ) ) : ?>
         <tr>
-          <th width="240px" align="left"><?php pll_e( 'Tanulmányok' ) ?></th>
+          <th width="240px" align="left" class="group"><?php pll_e( 'Tanulmányok' ) ?></th>
         <th></th>
         </tr>
         <?php foreach ( $educations as $data ) : ?>
@@ -38,7 +38,7 @@
       <?php $featured_items = get_field( 'solo_exhibition' ); ?>
       <?php if ( ! empty( $featured_items ) ) : ?>
         <tr>
-        <th width="240px" align="left"><?php pll_e( 'Önálló Kiállítások' ) ?></th>
+        <th width="240px" align="left" class="group"><?php pll_e( 'Önálló Kiállítások' ) ?></th>
         <th></th>
         </tr>
         <?php foreach ( $featured_items as $data ) : ?>
@@ -49,7 +49,7 @@
       <?php $featured_items_group = get_field( 'group_exhibition' ); ?>
       <?php if ( ! empty( $featured_items_group ) ) : ?>
         <tr>
-        <th width="240px" align="left"><?php pll_e( 'CSoportos Kiállítások' ) ?></th>
+        <th width="240px" align="left" class="group"><?php pll_e( 'CSoportos Kiállítások' ) ?></th>
         <th></th>
         </tr>
         <?php foreach ( $featured_items_group as $data ) : ?>
@@ -60,7 +60,7 @@
       <?php $prize = get_field( 'prize' ); ?>
       <?php if ( ! empty( $prize ) ) : ?>
         <tr>
-          <th width="240px" align="left"><?php pll_e( 'Díjak' ) ?></th>
+          <th width="240px" align="left" class="group"><?php pll_e( 'Díjak' ) ?></th>
           <th></th>
         </tr>
         <?php foreach ( $prize as $data ) : ?>
@@ -83,7 +83,7 @@
       <?php $membership = get_field( 'membership' ); ?>
       <?php if ( ! empty( $membership ) ) : ?>
         <tr>
-          <th width="240px" align="left"><?php pll_e( 'Tagság' ) ?></th>
+          <th width="240px" align="left" class="group"><?php pll_e( 'Tagság' ) ?></th>
           <th></th>
         </tr>
         <?php foreach ( $membership as $data ) : ?>
