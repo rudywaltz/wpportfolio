@@ -5,6 +5,10 @@
     margin-bottom: 30px;
     padding-top: 15px;
 
+    @media all and (max-width: $mobile){
+      flex-direction: column;
+    }
+
     &__sidebar {
       flex-basis: 240px;
       flex-shrink: 0;
