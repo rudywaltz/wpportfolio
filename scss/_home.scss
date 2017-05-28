@@ -8,7 +8,7 @@
     margin: 0;
     padding: 0 25px 25px;
 
-    @media all and (max-width: 768px) {
+    @media all and (max-width: $tablet) {
       height: auto;
     }
 
