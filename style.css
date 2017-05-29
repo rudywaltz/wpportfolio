@@ -439,7 +439,11 @@ p {
   .op-content__leftside {
     background: #eceae7;
     flex-basis: 33.33%;
-    flex-shrink: 0; }
+    flex-shrink: 0;
+    min-width: 400px; }
+    @media all and (max-width: 768px) {
+      .op-content__leftside {
+        min-width: 0; } }
   .op-content__rightside {
     flex-grow: 1; }
     .op-content__rightside .Wallop-item {
@@ -943,6 +947,9 @@ p {
     padding: 0 15px; }
     .op-table th.group {
       padding-top: 20px; }
+      .op-table th.group span {
+        bottom: -3px;
+        position: relative; }
     @media all and (max-width: 769px) {
       .op-table th {
         display: block;

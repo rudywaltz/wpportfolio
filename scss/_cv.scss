@@ -44,6 +44,11 @@
 
       &.group {
         padding-top: 20px;
+
+        span {
+          bottom: -3px;
+          position: relative;
+        }
       }
 
       @media all and (max-width: $tablet){

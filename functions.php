@@ -26,6 +26,8 @@ if (function_exists('pll_register_string')) {
 
 add_action( 'wp_enqueue_scripts', 'blankslate_load_scripts' );
 
+add_image_size( 'xlarge', 2000, 2000 );
+
 function blankslate_load_scripts()
 {
 wp_enqueue_script( 'main', get_template_directory_uri() . '/js/app.js', false, 1, true);

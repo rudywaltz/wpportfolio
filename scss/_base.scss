@@ -51,6 +51,11 @@ p {
       background: #eceae7;
       flex-basis: 33.33%;
       flex-shrink: 0;
+      min-width: 400px;
+
+      @media all and (max-width: 768px) {
+        min-width: 0;
+      }
     }
 
     &__rightside {

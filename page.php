@@ -2,11 +2,10 @@
 <?php get_header(); ?>
 <section id="content" role="main">
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
       <?php $BannerImage =
-        empty(get_field( 'banner' )['url']) ?
-            wp_get_attachment_url(get_post_thumbnail_id ($post->ID)) :
-            get_field( 'banner' )['url'] ?>
+        empty(get_field( 'banner' )) ?
+            wp_get_attachment_image_src(get_post_thumbnail_id ($post->ID), 'xlarge')[0] :
+            get_field( 'banner' )['sizes']['xlarge'] ?>
     <div class="op-lead" style="background-image: url(<?php echo $BannerImage; ?>);">
       <div class="op-lead__title">
         <h2><?php the_title(); ?></h2>
@@ -22,9 +21,10 @@
         $images = get_field('gallery');
         if( $images ): ?>
           <?php foreach( $images as $image ): ?>
-            <a href="<?php echo $image['url']; ?>" class="op-thumbnail" data-caption="<?php echo $image['title'] . ' | ' . $image['caption']; ?>" >
+              <?php var_dump($image['sizes']) ?>
+            <a href="<?php echo $image['sizes']['xlarge']; ?>" class="op-thumbnail" data-caption="<?php echo $image['title'] . ' | ' . $image['caption']; ?>" >
               <div class="op-thumbnail__wrap">
-                <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['title']; ?>" class="op-thumbnail__image" />
+                <img src="<?php echo $image['sizes']['medium_large']; ?>" alt="<?php echo $image['title']; ?>" class="op-thumbnail__image" />
               </div>
             </a>
           <?php endforeach; ?>
