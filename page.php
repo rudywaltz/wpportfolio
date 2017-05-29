@@ -22,9 +22,9 @@
         $images = get_field('gallery');
         if( $images ): ?>
           <?php foreach( $images as $image ): ?>
-            <a href="<?php echo $image['url']; ?>" class="op-thumbnail">
+            <a href="<?php echo $image['url']; ?>" class="op-thumbnail" data-caption="<?php echo $image['caption']; ?>" >
               <div class="op-thumbnail__wrap">
-                <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['caption']; ?>" data-caption="cap" class="op-thumbnail__image" />
+                <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" class="op-thumbnail__image" />
               </div>
             </a>
           <?php endforeach; ?>
