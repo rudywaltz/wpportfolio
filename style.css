@@ -812,7 +812,7 @@ p {
   height: calc(100vh - 50px);
   list-style-type: none;
   margin: 0;
-  padding: 0 25px 25px; }
+  padding: 25px; }
   @media all and (max-width: 769px) {
     .op-exhibitionlist {
       height: auto; } }
