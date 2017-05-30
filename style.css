@@ -798,6 +798,10 @@ p {
   top: 50%;
   transform: translate(-50%, -50%);
   vertical-align: top; }
+  @media all and (max-width: 768px) {
+    .op-slider__image {
+      top: 20px;
+      transform: translate(-50%, 0); } }
 
 .op-slider__controller {
   position: absolute;
@@ -871,7 +875,6 @@ p {
     margin-left: auto; }
 
 .op-lead {
-  background-image: url("../img/sorozat.jpg");
   background-size: cover;
   background-position: center;
   height: 300px;

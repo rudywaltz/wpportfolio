@@ -2,11 +2,9 @@
  &-slider {
    &__item {
      height: 100vh;
-     //left: 0;
      min-height: 130px;
-     position: relative; //
+     position: relative;
      text-align: center;
-     //top: 0;
      width: 100%;
    }
 
@@ -22,6 +20,11 @@
      top: 50%;
      transform: translate(-50%, -50%);
      vertical-align: top;
+
+     @media all and (max-width: 768px) {
+       top: 20px;
+       transform: translate(-50% , 0);
+     }
    }
 
    &__controller {
