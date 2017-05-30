@@ -21,7 +21,6 @@
         $images = get_field('gallery');
         if( $images ): ?>
           <?php foreach( $images as $image ): ?>
-              <?php var_dump($image['sizes']) ?>
             <a href="<?php echo $image['sizes']['xlarge']; ?>" class="op-thumbnail" data-caption="<?php echo $image['title'] . ' | ' . $image['caption']; ?>" >
               <div class="op-thumbnail__wrap">
                 <img src="<?php echo $image['sizes']['medium_large']; ?>" alt="<?php echo $image['title']; ?>" class="op-thumbnail__image" />
