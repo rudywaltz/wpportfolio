@@ -44,9 +44,9 @@
 
       &.group {
         padding-top: 20px;
+        padding-bottom: 3px;
 
         span {
-          bottom: -3px;
           position: relative;
         }
       }
@@ -62,7 +62,7 @@
     }
 
     td {
-      padding: 10px 5px 0;
+      padding: 10px 15px 0;
 
       @media all and (max-width: $tablet){
         display: block;
