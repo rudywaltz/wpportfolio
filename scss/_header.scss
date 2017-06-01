@@ -50,8 +50,10 @@
         body:not(.home) & {
           &:hover {
             .sub-menu {
-              display: block;
-              background: #eceae7;
+              @media all and (min-width: #{$tablet + 1}){
+                display: block;
+                background: #eceae7;
+              }
             }
           }
         }
