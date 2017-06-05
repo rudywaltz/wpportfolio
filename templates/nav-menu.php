@@ -1,5 +1,5 @@
 <header id="header" role="banner" class="op-header">
-    <div id="site-title"><?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '<h1>'; } else { echo '<span class="h1">'; } ?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a><?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '</h1>'; } else { echo '</span>'; } ?></div>
+    <div id="site-title"><img src="<?php echo get_template_directory_uri() .'/images/logo.jpg';?>" alt="" class="op-logo"></div>
   <nav id="menu" role="navigation" class="op-navigation">
     <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
   </nav>
