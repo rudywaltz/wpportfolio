@@ -8,6 +8,10 @@
     margin-bottom: 20px;
     position: relative;
 
+    @supports (background-attachment: fixed) {
+      background-attachment: local;
+    }
+
     &__title {
       position: absolute;
       bottom: 0;
