@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   if(typeof baguetteBox !== 'undefined') {
     baguetteBox.run('.js-gallery', {
-      overlayBackgroundColor: 'white'
+      overlayBackgroundColor: 'white',
+      buttons: true
     });
   }
 });
