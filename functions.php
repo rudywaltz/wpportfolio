@@ -52,7 +52,10 @@ function blankslate_filter_wp_title( $title )
 {
 return $title . esc_attr( get_bloginfo( 'name' ) );
 }
-add_action( 'widgets_init', 'blankslate_widgets_init' );
+
+if (function_exists('blankslate_widgets_init')) {
+  add_action( 'widgets_init', 'blankslate_widgets_init' );
+}
 
 function blankslate_custom_pings( $comment )
 {

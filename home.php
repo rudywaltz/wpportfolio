@@ -10,7 +10,7 @@
           <div class="op-exhibition__header">
             <?php
               $type = get_row_layout();
-              if(function_exists(pll_e)) {
+              if(function_exists('pll_e')) {
                 if ($type == 'past' ):
                   pll_e( 'Volt' );
                 elseif($type == 'now'):
@@ -41,4 +41,3 @@
   <?php require_once('templates/slider.php'); ?>
 </div>
 <?php  get_footer(); ?>
-

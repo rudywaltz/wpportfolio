@@ -13,7 +13,7 @@
             <div class="op-box__capture">
               <h3><?php echo $child->post_title; ?></h3>
               <span class="op-box__cta">
-                <?php  if(function_exists(pll_e)) { pll_e( 'Megnéz' ); } ?>
+                <?php  if(function_exists('pll_e')) { pll_e( 'Megnéz' ); } ?>
               </span>
             </div>
           </a>

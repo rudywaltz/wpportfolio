@@ -7,7 +7,7 @@
   <nav id="menu" role="navigation" class="op-navigation">
     <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
   </nav>
-  <?php if(function_exists(pll_the_languages)) : ?>
+  <?php if(function_exists('pll_the_languages')) : ?>
     <ul class="op-langselector"><?php pll_the_languages(array('show_flags'=>0,'show_names'=>1)); ?></ul>
   <?php endif; ?>
 
