@@ -33,7 +33,8 @@
     font-size: 18px;
   }
 
-  &-gallery {
+  &-gallery,
+  &-montage {
     column-count: 3;
     column-gap: 1px;
     font-size: 0;

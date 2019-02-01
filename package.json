@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "autoprefixer": "postcss style.css --use autoprefixer -o style.css",
-    "sass": "node-sass --include-path scss ./scss/style.scss ./style.css",
+    "sass": "npx node-sass --include-path scss ./scss/style.scss ./style.css",
     "sass-watch": "node-sass --watch --include-path scss ./scss/style.scss ./style.css",
     "build": "npm run sass && npm run autoprefixer"
   },
