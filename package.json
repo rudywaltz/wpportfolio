@@ -8,7 +8,7 @@
     "build": "npm run sass && npm run autoprefixer"
   },
   "devDependencies": {
-    "autoprefixer": "9.8.5",
+    "autoprefixer": "9.8.6",
     "node-sass": "4.14.1",
     "postcss-cli": "7.1.1"
   },
