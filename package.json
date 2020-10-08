@@ -13,7 +13,7 @@
     "postcss-cli": "7.1.1"
   },
   "dependencies": {
-    "postcss": "7.0.32"
+    "postcss": "7.0.34"
   },
   "engines": {
     "node": "12.18.0"
