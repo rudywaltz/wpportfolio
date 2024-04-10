@@ -5,7 +5,14 @@
 <meta http-equiv="refresh" content="0; url=https://oliviakovacs.wordpress.com/">
 <meta name="viewport" content="width=device-width" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600">
-  <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
+  <?php
+    wp_enqueue_style(
+      'main-styles',
+      get_template_directory_uri() . '/style.css', array(),
+      filemtime(get_template_directory() . '/style.css'),
+      false
+    );
+  ?>
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+  console.log('loaded', baguetteBox);
   if(typeof baguetteBox !== 'undefined') {
     baguetteBox.run('.js-gallery', {
       overlayBackgroundColor: 'white',

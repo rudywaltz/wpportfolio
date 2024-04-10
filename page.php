@@ -46,8 +46,8 @@
               <img src="<?php echo $data['montage_main_image']['sizes']['medium_large']; ?>" alt="<?php echo $data['title']; ?>" class="op-thumbnail__image" />
             </div>
           </a>
-          <?php foreach ( $data['montage_gallery'] as $gallery ) : ?>
-          <a href="<?php echo $gallery['sizes']['xlarge']; ?>" class="op-thumbnail" data-caption="<?php echo $gallery['title'] . ' | ' . $gallery['caption']; ?>"></a>
+          <?php foreach ( $data['montage_gallery'] as $galleryItem ) : ?>
+          <a href="<?php echo $galleryItem['sizes']['xlarge']; ?>" class="op-thumbnail" data-caption="<?php echo $galleryItem['title'] . ' | ' . $galleryItem['caption']; ?>"></a>
           <?php endforeach; ?>
         </div>
       <?php
